@@ -1,0 +1,13 @@
+<div class = "center" >
+<div class='center2'>
+<h4>Post-Title: <%= @post.title %></h4>
+<h4>Post-Body</h4>
+<p><%= @post.body %></p>
+<% if current_member %>
+<h4>Author: <%= current_member.name %></h4>
+<h4>Author_Id: <%= current_member.id %></h4>
+<% end %>
+</div>
+<button class='forget'><%= link_to "Back to Post List", posts_path %></button> <br>
+<button class='forget'><%= link_to "Create a New Post", new_post_path, class: "new_post" %></button>
+</div

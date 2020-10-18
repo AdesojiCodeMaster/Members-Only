@@ -1,0 +1,22 @@
+<div class = "post-index center" > 
+<h1>All Posts</h1>
+<ul id="posts">
+
+  <% @posts.each do |post| %>
+  <% if current_member %>
+  <h3>---------------------------------------------------</h3> 
+  <p>Author: <%= post.member.name %></p>
+    <label for= 'post'>Post Title:</label><button><%= link_to post.title, post_path(post) %> </button>
+    <br>
+    <br>
+  <button> <%= link_to "Create a New Post", new_post_path, class: "new_post" %></button>
+  <% else %>
+    <h2>Post-Title:<%= post.title%></h2>
+    <% end %>
+   
+    <br>
+    <br>
+    <% end %>
+</ul>
+
+</div>
