@@ -12,19 +12,21 @@
   <body>
  
   <% if current_member %> 
-   <%= button_to "Sign out", destroy_member_session_path, :method => :delete, class: "destroy_member_session" %>
+  <p> <b class='alert'><%=current_member.name%></b>; Welcome to membership platform!!!</p>
+  <div class='div-index'>
+   <div class='btn1'><%= button_to "Sign out", destroy_member_session_path, :method => :delete, class: "destroy_member_session" %></div>
+   <div class='btn2'><button> <%= link_to "Create a New Post", new_post_path, class: "new_post" %></button></div>
+   </div>
    <%else%>
    <div class='nav'>
-    <nav>
-   <button><%= link_to "Sign up", new_member_registration_path,  class: "new_member_registration" %></button>
-   <button><%= link_to "Login", new_member_session_path,  class: "new_member_session" %></button>
-    </nav>
-    </div>
-   
-<% end %>  
+   <button class='btn1'><%= link_to "Sign up", new_member_registration_path,  class: "new_member_registration" %></button>
+   <button class='btn2'><%= link_to "Login", new_member_session_path,  class: "new_member_session" %></button>
+   </div>
+   <span class='bye-alert'>Friend bye for now we love you! Hope to see you soon!!</span>
+   <% end %>  
 
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+  <p class="notice"> <%= notice %></p>
+  <p class="alert"> <%= alert %></p>
     <%= yield %>
   </body>
 </html>

@@ -16,6 +16,7 @@
  body, 
  .center2 {
     align-items: center;
+    background-color: #7fffd4;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -47,4 +48,34 @@
 
 h4 {
    margin-top: 0;
+ }
+
+ .nav {
+  margin-top: 30px;
+  margin-bottom: 30px;
+ }
+
+ .btn1 {margin-right: 100px;}
+
+ .btn2 {
+  margin-left: 100px;
+ }
+
+ .alert, .notice {
+  color: #00008b;
+ }
+
+ .div-index {
+  display: flex;
+  flex-direction: row;
+ }
+
+ .destroy_member_session{
+  padding-top: 8px;
+  padding-bottom: 8px;
+ }
+
+ .bye-alert{
+  color: #0000ff;
+  font-size: 1.5rem;
  }
